@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>home</title>
 
-    <script type="text/javascript" src="./js/jquery.min.js"></script>  
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
           crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">   <!-- css-->
