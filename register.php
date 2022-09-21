@@ -27,25 +27,25 @@
             if(!strpos($email,'@')){
                 echo '<div class="alert alert-warning" role="alert">email format err</div>';
                 $url = "./registerView.php";
-                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";die;
             }
             if(!is_int($phone)){
                 echo '<div class="alert alert-warning" role="alert">phone format err</div>';
                 $url = "./registerView.php";
-                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";die;
             }
 
 
             if(!preg_match("/[a-zA-Z0-9]\w{5,17}/", $passWd)){
                 echo '<div class="alert alert-warning" role="alert">passwd format err</div>';
                 $url = "./registerView.php";
-                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";die;
             }
 
             if ($passWd != $confirmPassWd) {
                 echo '<div class="alert alert-warning" role="alert">2 password err</div>';
                 $url = "./registerView.php";
-                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";die;
             }
 
 
