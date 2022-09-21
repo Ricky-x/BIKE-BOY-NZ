@@ -19,7 +19,8 @@
             $confirmPassWd = md5($_POST['confirmPassWd']);
             $email = $_POST['email'];
             $username = $_POST['userName'];
-            $phone = $_POST['phone'];
+                      $phone = intval($_POST['phone']);
+
             $address = $_POST['address'];
             $time = date('Y-m-d H:i:s');
 
