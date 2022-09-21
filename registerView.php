@@ -38,6 +38,12 @@
                 </div>
                 <div class="form-group">
                     <label>
+                        confirmPassWd:
+                        <input type="password" class="form-control" name="confirmPassWd" id="password">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
                         address:
                         <input type="text" class="form-control" name="address" id="address">
                     </label>

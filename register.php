@@ -16,11 +16,39 @@
             $opdbs = new OPDBS();
 
             $passWd = md5($_POST['password']);
+            $confirmPassWd = md5($_POST['confirmPassWd']);
             $email = $_POST['email'];
             $username = $_POST['userName'];
             $phone = $_POST['phone'];
             $address = $_POST['address'];
             $time = date('Y-m-d H:i:s');
+
+
+            if(!strpos($email,'@')){
+                echo '<div class="alert alert-warning" role="alert">email format err</div>';
+                $url = "./registerView.php";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+            }
+            if(!is_int($phone)){
+                echo '<div class="alert alert-warning" role="alert">phone format err</div>';
+                $url = "./registerView.php";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+            }
+
+
+            if(!preg_match("/[a-zA-Z0-9]\w{5,17}/", $passWd)){
+                echo '<div class="alert alert-warning" role="alert">passwd format err</div>';
+                $url = "./registerView.php";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+            }
+
+            if ($passWd != $confirmPassWd) {
+                echo '<div class="alert alert-warning" role="alert">2 password err</div>';
+                $url = "./registerView.php";
+                echo "<meta http-equiv='refresh' content ='3;url=$url'>";
+            }
+
+
             $sql = "select * from members where email = '{$email}' ";
             $memberD = $opdbs->getOne($sql);
            
